@@ -6,10 +6,9 @@ public class Cripto {
 
 	// Function that takes the string input
 	// and returns the hashed string.
-	public static String sha256(String input)
-	{
+	public static String sha256(String input) {
 		try {
-			MessageDigest sha = MessageDigest.getInstance("SHA-256");
+			MessageDigest sha = MessageDigest.getInstance("SHA-512");
 			int i = 0;
 
 			byte[] hash = sha.digest(input.getBytes("UTF-8"));
@@ -19,16 +18,15 @@ public class Cripto {
 			StringBuffer hexHash = new StringBuffer();
 
 			while (i < hash.length) {
-				  String hex = Integer.toHexString(0xff & hash[i]);
-				  if (hex.length() == 1)
-					    hexHash.append('0');
-				  hexHash.append(hex);
-				  i++;
+				String hex = Integer.toHexString(0xff & hash[i]);
+				if (hex.length() == 1)
+					hexHash.append('0');
+				hexHash.append(hex);
+				i++;
 			}
 
 			return hexHash.toString();
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
