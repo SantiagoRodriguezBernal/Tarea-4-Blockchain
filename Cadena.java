@@ -93,7 +93,7 @@ public class Cadena {
 
 			fileWriter.write("Dificultad\tTiempo (ms)\n");
 
-			for (int dificultad = 2; dificultad <= 8; dificultad++) {
+			for (int dificultad = 2; dificultad <= 7; dificultad++) {
 				System.out.println("_---------------------------------------------_: Dificultad" + dificultad);
 				long start = System.currentTimeMillis();
 

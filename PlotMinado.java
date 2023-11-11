@@ -30,7 +30,7 @@ public class PlotMinado {
             e.printStackTrace();
         }
         try {
-            BufferedReader fileReader512 = new BufferedReader(new FileReader("./docs/tiempoMinadoSHA512.txt"));
+            BufferedReader fileReader512 = new BufferedReader(new FileReader("./docs/tiempoMinadoSHA512V2.txt"));
             fileReader512.readLine();
 
             String line;
@@ -49,7 +49,7 @@ public class PlotMinado {
         XYChart chart = new XYChartBuilder().width(800).height(600).title("Tiempo de minado por dificultad 256")
                 .xAxisTitle("Dificultad").yAxisTitle("Tiempo (ms)").build();
 
-        XYChart chart512 = new XYChartBuilder().width(800).height(600).title("Tiempo de minado por dificultad 256")
+        XYChart chart512 = new XYChartBuilder().width(800).height(600).title("Tiempo de minado por dificultad 512")
                 .xAxisTitle("Dificultad").yAxisTitle("Tiempo (ms)").build();
 
         // Agregar series al gráfico
